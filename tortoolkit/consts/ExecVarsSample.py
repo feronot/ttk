@@ -6,10 +6,12 @@ except:
         # Set true if its VPS
         IS_VPS = False
         
-        API_HASH = ""
-        API_ID = 0
-        BOT_TOKEN = ""
-        BASE_URL_OF_BOT = ""
+        API_HASH = os.environ.get("API_HASH")
+        API_ID = int(os.environ.get("API_ID"))
+        BOT_TOKEN = os.environ.get("BOT_TOKEN")
+        BASE_URL_OF_BOT = os.environ.get("BASE_URL")
+        # ALLOWED USERS [ids of user or supergroup] seperate by commas
+        ALD_USR = [1200613153,-697808449,-1001517784321,-1001792060180,-1001517833978,-1001716097260]
 
         # Edit the server port if you want to keep it default though.
         SERVPORT = 80
